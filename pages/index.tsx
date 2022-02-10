@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <p>
           I&apos;m Samuel Fletcher, a student currently studying at Ryerson
           University in Toronto, Ontario. Below you can find my interests, as
-          well as my skills and contact information.
+          well as my skills.
         </p>
         <div
           className="d-flex p-4 justify-content-evenly"
