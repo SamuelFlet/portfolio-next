@@ -1,7 +1,13 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { Card, Button ,Accordion} from "react-bootstrap";
+import styles from "../styles/Home.module.css";
+import coding from "../public/coding.png";
+import audio from "../public/audiophile.png";
+import fountainpen from "../public/fountainpen.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Home: NextPage = () => {
   return (
@@ -13,60 +19,73 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+        <h1 className="display-1">Samuel Fletcher</h1>
+        <p>
+          I'm Samuel Fletcher, a student currently studying at Ryerson
+          University in Toronto, Ontario. Below you can find my interests, as
+          well as my skills and contact information.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <div className="d-flex p-4 justify-content-evenly" style={{ width: "75%" }}>
+        <Card style={{ width: "18rem" }}>
+        <Image src={coding} className="img-fluid" alt="Card image" />
+          <Card.Body>
+            <Card.Title>Web Development</Card.Title>
+            <Card.Text>
+            Whether its creating a new application or working on a preexisting
+            one, I'm happy to put in the work.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: "18rem" }}>
+        <Image src={audio} className="img-fluid" alt="Card image" />
+          <Card.Body>
+            <Card.Title>Audio Equipment</Card.Title>
+            <Card.Text>
+            I collect headphones! I'm a big fan of premium audio equipment and quality.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        
+        <Card style={{ width: "18rem" }}>
+        <Image src={fountainpen} className="img-fluid" alt="Card image" />
+          <Card.Body>
+            <Card.Title>Fountain Pens</Card.Title>
+            <Card.Text >
+            I collect fountain pens! Writing in my spare time helps me relax, my writing is done with my growing collection of fountain pens.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+</div>
+<Accordion style={{ width: "75%" }}>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>Accordion Item #1</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header>Accordion Item #2</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+        
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
