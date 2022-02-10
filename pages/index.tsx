@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className="display-1">Samuel Fletcher</h1>
         <p>
-          I'm Samuel Fletcher, a student currently studying at Ryerson
+          I&apos;m Samuel Fletcher, a student currently studying at Ryerson
           University in Toronto, Ontario. Below you can find my interests, as
           well as my skills and contact information.
         </p>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             <Card.Title>Web Development</Card.Title>
             <Card.Text>
             Whether its creating a new application or working on a preexisting
-            one, I'm happy to put in the work.
+            one, I&apos;m happy to put in the work.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           <Card.Body>
             <Card.Title>Audio Equipment</Card.Title>
             <Card.Text>
-            I collect headphones! I'm a big fan of premium audio equipment and quality.
+            I collect headphones! I&apos;m a big fan of premium audio equipment and quality.
             </Card.Text>
           </Card.Body>
         </Card>
