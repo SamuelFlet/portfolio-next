@@ -61,7 +61,7 @@ const Home: NextPage = () => {
             </Card.Body>
           </Card>
         </div>
-        <Accordion style={{ width: "75%" }} defaultActiveKey="0">
+        <Accordion style={{ width: "75%" }}>
           <Accordion.Item eventKey="0">
             <Accordion.Header>Programming Languages</Accordion.Header>
             <Accordion.Body>
