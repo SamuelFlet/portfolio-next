@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Card, Button ,Accordion} from "react-bootstrap";
+import { Card, Accordion } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import coding from "../public/coding.png";
 import audio from "../public/audiophile.png";
 import fountainpen from "../public/fountainpen.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 const Home: NextPage = () => {
   return (
@@ -25,64 +24,69 @@ const Home: NextPage = () => {
           University in Toronto, Ontario. Below you can find my interests, as
           well as my skills and contact information.
         </p>
-        <div className="d-flex p-4 justify-content-evenly" style={{ width: "75%" }}>
-        <Card style={{ width: "18rem" }}>
-        <Image src={coding} className="img-fluid" alt="Card image" />
-          <Card.Body>
-            <Card.Title>Web Development</Card.Title>
-            <Card.Text>
-            Whether its creating a new application or working on a preexisting
-            one, I&apos;m happy to put in the work.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: "18rem" }}>
-        <Image src={audio} className="img-fluid" alt="Card image" />
-          <Card.Body>
-            <Card.Title>Audio Equipment</Card.Title>
-            <Card.Text>
-            I collect headphones! I&apos;m a big fan of premium audio equipment and quality.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        
-        <Card style={{ width: "18rem" }}>
-        <Image src={fountainpen} className="img-fluid" alt="Card image" />
-          <Card.Body>
-            <Card.Title>Fountain Pens</Card.Title>
-            <Card.Text >
-            I collect fountain pens! Writing in my spare time helps me relax, my writing is done with my growing collection of fountain pens.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-</div>
-<Accordion style={{ width: "75%" }}>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header>Accordion Item #1</Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-  <Accordion.Item eventKey="1">
-    <Accordion.Header>Accordion Item #2</Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-        
+        <div
+          className="d-flex p-4 justify-content-evenly"
+          style={{ width: "75%" }}
+        >
+          <Card style={{ width: "18rem" }}>
+            <Image src={coding} className="img-fluid" alt="Card image" />
+            <Card.Body>
+              <Card.Title>Web Development</Card.Title>
+              <Card.Text>
+                Whether its creating a new application or working on a
+                preexisting one, I&apos;m happy to put in the work.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: "18rem" }}>
+            <Image src={audio} className="img-fluid" alt="Card image" />
+            <Card.Body>
+              <Card.Title>Audio Equipment</Card.Title>
+              <Card.Text>
+                I collect headphones! I&apos;m a big fan of premium audio
+                equipment and quality.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: "18rem" }}>
+            <Image src={fountainpen} className="img-fluid" alt="Card image" />
+            <Card.Body>
+              <Card.Title>Fountain Pens</Card.Title>
+              <Card.Text>
+                I collect fountain pens! Writing in my spare time helps me
+                relax, my writing is done with my growing collection of fountain
+                pens.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+        <Accordion style={{ width: "75%" }} defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Programming Languages</Accordion.Header>
+            <Accordion.Body>
+              <div className="d-flex p-4 justify-content-evenly">
+                <Image src="/progLang/python.svg" alt="Python" width="128" height="128"/>
+                <Image src="/progLang/java.svg" alt="Python" width="128" height="128"/>
+                <Image src="/progLang/javascript.svg" alt="Python" width="128" height="128"/>
+                <Image src="/progLang/c.svg" alt="Python" width="128" height="128"/>
+                <Image src="/progLang/html.svg" alt="Python" width="128" height="128"/>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Technologies</Accordion.Header>
+            <Accordion.Body>
+            <div className="d-flex p-4 justify-content-evenly">
+              <Image src="/tech/react.svg" alt="Python" width="128" height="128"/>
+              <Image src="/tech/django.svg" alt="Python" width="128" height="128"/>
+              <Image src="/tech/mysql.svg" alt="Python" width="128" height="128"/>
+              <Image src="/tech/node.svg" alt="Python" width="128" height="128"/>
+              <Image src="/tech/vue.svg" alt="Python" width="128" height="128"/>
+            </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </main>
     </div>
   );
