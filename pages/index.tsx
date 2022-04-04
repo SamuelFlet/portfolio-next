@@ -19,8 +19,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Link href="/projects">
-            <Card>Home &rarr;</Card>
+        <Link href="/projects" passHref>
+          Home
         </Link>
         <h1 className="display-1">Samuel Fletcher</h1>
         <p>
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           className="d-flex p-4 justify-content-evenly"
           style={{ width: "75%" }}
         >
-          <Card style={{ width: "18rem" }}>
+          <Card className="bg-dark" style={{ width: "18rem" }}>
             <Image src={coding} className="img-fluid" alt="Card image" />
             <Card.Body>
               <Card.Title>Web Development</Card.Title>
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card style={{ width: "18rem" }}>
+          <Card className="bg-dark" style={{ width: "18rem" }}>
             <Image src={audio} className="img-fluid" alt="Card image" />
             <Card.Body>
               <Card.Title>Audio Equipment</Card.Title>
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
             </Card.Body>
           </Card>
 
-          <Card style={{ width: "18rem" }}>
+          <Card className="bg-dark" style={{ width: "18rem" }}>
             <Image src={fountainpen} className="img-fluid" alt="Card image" />
             <Card.Body>
               <Card.Title>Fountain Pens</Card.Title>
@@ -65,82 +65,94 @@ const Home: NextPage = () => {
             </Card.Body>
           </Card>
         </div>
-        <Accordion style={{ width: "75%" }}>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>Programming Languages</Accordion.Header>
-            <Accordion.Body>
-              <div className="d-flex p-4 justify-content-evenly">
-                <Image
-                  src="/progLang/python.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/progLang/java.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/progLang/javascript.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/progLang/c.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/progLang/html.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-              </div>
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>Technologies</Accordion.Header>
-            <Accordion.Body>
-              <div className="d-flex p-4 justify-content-evenly">
-                <Image
-                  src="/tech/react.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/tech/django.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/tech/mysql.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/tech/node.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-                <Image
-                  src="/tech/vue.svg"
-                  alt="Python"
-                  width="128"
-                  height="128"
-                />
-              </div>
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+        <div className="p-5">
+          <h3>Programming Languages</h3>
+          <div className="d-flex p-4 justify-content-evenly">
+            <div className="p-4">
+              <Image
+                src="/progLang/python.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/progLang/java.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/progLang/javascript.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/progLang/c.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/progLang/html.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+          </div>
+          <h3>Technologies</h3>
+          <div className="d-flex p-4 justify-content-evenly">
+            <div className="p-4">
+              <Image
+                src="/tech/react.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/tech/django.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/tech/mysql.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/tech/node.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+            <div className="p-4">
+              <Image
+                src="/tech/vue.svg"
+                alt="Python"
+                width="128"
+                height="128"
+              />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
